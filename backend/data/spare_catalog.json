@@ -1,0 +1,57 @@
+{
+  "spares": [
+    {
+      "part_id": "SKF-6205-2RS",
+      "name": "SKF 6205-2RS Bearing",
+      "for_equipment": [
+        "motor-4",
+        "conveyor-c01"
+      ],
+      "stock": 0,
+      "lead_time_days": 12,
+      "supplier": "ABC Bearings Ltd",
+      "alt_supplier": "DEF Industrial",
+      "alt_lead_time_days": 8,
+      "cost_inr": 2400
+    },
+    {
+      "part_id": "SEAL-HP-02",
+      "name": "Hydraulic Pump Seal Kit",
+      "for_equipment": [
+        "press-hp02"
+      ],
+      "stock": 2,
+      "lead_time_days": 5,
+      "supplier": "Seal Corp India",
+      "alt_supplier": "Global Seals",
+      "alt_lead_time_days": 7,
+      "cost_inr": 8500
+    },
+    {
+      "part_id": "VALVE-CS-01",
+      "name": "Cooling System Bypass Valve",
+      "for_equipment": [
+        "cooling-cs01"
+      ],
+      "stock": 1,
+      "lead_time_days": 15,
+      "supplier": "Thermal Solutions Pvt",
+      "alt_supplier": "Industrial Coolants",
+      "alt_lead_time_days": 10,
+      "cost_inr": 45000
+    },
+    {
+      "part_id": "GB-GEAR-02",
+      "name": "Gearbox Input Shaft Gear",
+      "for_equipment": [
+        "gearbox-gb02"
+      ],
+      "stock": 0,
+      "lead_time_days": 21,
+      "supplier": "Heavy Gears Ltd",
+      "alt_supplier": "None",
+      "alt_lead_time_days": -1,
+      "cost_inr": 120000
+    }
+  ]
+}

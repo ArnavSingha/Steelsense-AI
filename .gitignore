@@ -1,0 +1,25 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.env
+*.db
+backend/data/vector_store/faiss_index.bin
+backend/data/vector_store/metadata.db
+
+# Node
+node_modules/
+.next/
+out/
+npm-debug.log
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ZIP
+*.zip
+

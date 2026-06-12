@@ -1,0 +1,75 @@
+{
+  "equipment": [
+    {
+      "id": "motor-4",
+      "name": "Rolling Mill Motor 4",
+      "type": "motor",
+      "location": "Rolling Mill Bay 2",
+      "criticality": "HIGH",
+      "downtime_cost_per_hr": 500000
+    },
+    {
+      "id": "gearbox-gb02",
+      "name": "Gearbox GB-02",
+      "type": "gearbox",
+      "location": "Rolling Mill Bay 2",
+      "criticality": "HIGH",
+      "downtime_cost_per_hr": 500000
+    },
+    {
+      "id": "conveyor-c01",
+      "name": "Conveyor Line C-01",
+      "type": "conveyor",
+      "location": "Material Handling",
+      "criticality": "MEDIUM",
+      "downtime_cost_per_hr": 200000
+    },
+    {
+      "id": "press-hp02",
+      "name": "Hydraulic Press HP-02",
+      "type": "hydraulic_press",
+      "location": "Forging Bay",
+      "criticality": "HIGH",
+      "downtime_cost_per_hr": 400000
+    },
+    {
+      "id": "cooling-cs01",
+      "name": "Cooling System CS-01",
+      "type": "cooling",
+      "location": "Cooling Tower Area",
+      "criticality": "CRITICAL",
+      "downtime_cost_per_hr": 700000
+    }
+  ],
+  "connections": [
+    {"from": "motor-4", "to": "gearbox-gb02", "relation": "drives"},
+    {"from": "gearbox-gb02", "to": "conveyor-c01", "relation": "feeds"},
+    {"from": "cooling-cs01", "to": "motor-4", "relation": "cools"},
+    {"from": "cooling-cs01", "to": "press-hp02", "relation": "cools"}
+  ],
+  "components": [
+    {"id": "bearing-m4", "name": "SKF 6205-2RS Bearing", "installed_in": "motor-4", "install_date": "2025-03-15", "rated_life_hrs": 20000, "current_hrs": 13000},
+    {"id": "seal-hp02", "name": "Hydraulic Pump Seal", "installed_in": "press-hp02", "install_date": "2024-11-01"}
+  ],
+  "symptoms": {
+    "motor-4": ["High Vibration", "Temperature Rise", "Current Fluctuation"],
+    "press-hp02": ["Pressure Drop", "Fluid Contamination", "Seal Leak"],
+    "cooling-cs01": ["Coolant Temperature Rise", "Flow Rate Drop"]
+  },
+  "failure_modes": {
+    "High Vibration + Temperature Rise": {
+      "probable_causes": [
+        {"cause": "Lubrication Failure", "likelihood": "HIGH"},
+        {"cause": "Shaft Misalignment", "likelihood": "MEDIUM"},
+        {"cause": "Bearing Fatigue", "likelihood": "LOW"}
+      ]
+    },
+    "Pressure Drop + Fluid Contamination": {
+      "probable_causes": [
+        {"cause": "Pump Wear", "likelihood": "HIGH"},
+        {"cause": "Seal Failure", "likelihood": "MEDIUM"},
+        {"cause": "Filter Clogging", "likelihood": "LOW"}
+      ]
+    }
+  }
+}

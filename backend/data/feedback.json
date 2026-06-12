@@ -1,0 +1,93 @@
+[
+  {
+    "timestamp": "2026-06-10 11:55:46",
+    "equipment_id": "motor-4",
+    "recommendation": "test rec",
+    "feedback": "accepted",
+    "reason": "test reason"
+  },
+  {
+    "timestamp": "2026-06-10 12:06:51",
+    "equipment_id": "COOLING-CS01",
+    "recommendation": "Flush coolant lines and replace filter element in block CS-01. Inspect feed pump for cavitation.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-10 12:11:19",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Halt production line C-01. Inspect and replace main drive bearing on MOTOR-4. Check COOLING-CS01 fluid line for blockages.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-10 12:14:32",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "MOTOR-4: Vibration anomaly pattern matched",
+    "feedback": "acknowledged",
+    "reason": "Operator acknowledged WARNING alert."
+  },
+  {
+    "timestamp": "2026-06-10 12:14:50",
+    "equipment_id": "COOLING-CS01",
+    "recommendation": "COOLING-CS01: Fluid pressure drop detected",
+    "feedback": "acknowledged",
+    "reason": "Operator acknowledged CRITICAL alert."
+  },
+  {
+    "timestamp": "2026-06-11 23:48:43",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Halt production line C-01. Inspect and replace main drive bearing on MOTOR-4. Check COOLING-CS01 fluid line for blockages.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-11 23:49:04",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Expedite Spare Part: SKF Bearing (SKU-8821)",
+    "feedback": "expedited",
+    "reason": "Operator initiated expedited order for out-of-stock spare parts."
+  },
+  {
+    "timestamp": "2026-06-12 00:38:11",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Test audit recommendation",
+    "feedback": "acknowledged",
+    "reason": "Automated audit test"
+  },
+  {
+    "timestamp": "2026-06-12 00:58:49",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Expedite Spare Part: SKF Bearing (SKU-8821)",
+    "feedback": "expedited",
+    "reason": "Operator initiated expedited order for out-of-stock spare parts."
+  },
+  {
+    "timestamp": "2026-06-12 00:58:53",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Halt production line C-01. Inspect and replace main drive bearing on MOTOR-4. Check COOLING-CS01 fluid line for blockages.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-12 01:08:34",
+    "equipment_id": "MOTOR-4",
+    "recommendation": "Halt production line C-01. Inspect and replace main drive bearing on MOTOR-4. Check COOLING-CS01 fluid line for blockages.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-12 01:09:30",
+    "equipment_id": "COOLING-CS01",
+    "recommendation": "Flush coolant lines and replace filter element in block CS-01. Inspect feed pump for cavitation.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  },
+  {
+    "timestamp": "2026-06-12 01:10:03",
+    "equipment_id": "PRESS-HP02",
+    "recommendation": "No active maintenance required. Continue standard logging and periodic temperature inspections.",
+    "feedback": "approved",
+    "reason": "Operator decision: APPROVED."
+  }
+]
