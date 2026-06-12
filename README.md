@@ -1,6 +1,6 @@
 # SteelSense AI: Industrial Maintenance Copilot
 
-**ForgeMind AI | Tata Steel AI Hackathon Submission**
+** Tata Steel AI Hackathon Submission**
 
 SteelSense AI is an ultra-premium, dual-layer predictive maintenance and diagnostic copilot. Designed exclusively for heavy industrial environments, it moves beyond basic dashboarding to actually understand the **business and financial impact** of cascading equipment failures.
 
