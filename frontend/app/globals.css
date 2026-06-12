@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0b0d;
+  --color-surface: #121315;
+  --color-surface-dim: #18181b;
+  --color-surface-bright: #38393b;
+
+  /* Toned down primary cyan for a more professional look */
+  --color-brand-primary: #0ea5e9; 
+  --color-brand-secondary: #ffb800;
+  --color-brand-critical: #ff3d00;
+  --color-brand-success: #10b981;
+
+  --font-geist: var(--font-geist-sans);
+  --font-mono: var(--font-jetbrains-mono);
+}
+
+:root {
+  --background: #0a0b0d;
+  --foreground: #e2e8f0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist), sans-serif;
+  overflow-x: hidden;
+}
+
+/* Base Scrollbar Hide */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+
+/* Premium Glassmorphism Module */
+.glass-panel-premium {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-panel-premium:hover {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.3);
+}
+
+/* Data / Label Typography */
+.label-caps {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.data-lg {
+  font-family: var(--font-mono);
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Glowing Pulse Animations */
+@keyframes pulse-cyan {
+  0% { box-shadow: 0 0 0px #00f0ff; }
+  50% { box-shadow: 0 0 12px #00f0ff; }
+  100% { box-shadow: 0 0 0px #00f0ff; }
+}
+@keyframes pulse-amber {
+  0% { box-shadow: 0 0 0px #ffb800; }
+  50% { box-shadow: 0 0 12px #ffb800; }
+  100% { box-shadow: 0 0 0px #ffb800; }
+}
+@keyframes pulse-red {
+  0% { box-shadow: 0 0 0px #ff3d00; }
+  50% { box-shadow: 0 0 16px #ff3d00; }
+  100% { box-shadow: 0 0 0px #ff3d00; }
+}
+
+.glow-cyan { animation: pulse-cyan 3s infinite ease-in-out; }
+.glow-amber { animation: pulse-amber 2s infinite ease-in-out; }
+.glow-red { animation: pulse-red 1s infinite ease-in-out; }
+
+/* Reduced Motion Fallback */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
