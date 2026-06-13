@@ -16,3 +16,5 @@ langgraph-checkpoint-sqlite
 sqlalchemy
 aiosqlite
 python-multipart
+pydantic-settings
+
