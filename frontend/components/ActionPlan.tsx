@@ -61,7 +61,7 @@ export default function ActionPlan({ activeAsset, refetchLogs }: ActionPlanProps
   const handleDecision = async (status: 'approved' | 'rejected') => {
     setSubmitting(true);
     try {
-      const res = await fetch('http://localhost:8001/api/feedback', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -88,7 +88,7 @@ export default function ActionPlan({ activeAsset, refetchLogs }: ActionPlanProps
     if (expedited) return;
     setSubmitting(true);
     try {
-      const res = await fetch('http://localhost:8001/api/feedback', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

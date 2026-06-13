@@ -32,7 +32,7 @@ export default function ChatPage() {
     setIsLoading(true);
 
     try {
-      const res = await fetch('http://localhost:8001/api/v1/chat/', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/chat/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

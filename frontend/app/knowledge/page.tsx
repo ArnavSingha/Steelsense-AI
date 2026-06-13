@@ -19,7 +19,7 @@ export default function KnowledgeBasePage() {
   React.useEffect(() => {
     const fetchDocs = async () => {
       try {
-        const res = await fetch('http://localhost:8001/api/v1/knowledge/documents');
+        const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/knowledge/documents');
         if (res.ok) {
           const data = await res.json();
           if (data && data.length > 0) {

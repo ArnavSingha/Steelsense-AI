@@ -20,7 +20,7 @@ export default function EquipmentRegistryPage() {
   React.useEffect(() => {
     const fetchEquipment = async () => {
       try {
-        const res = await fetch('http://localhost:8001/api/v1/equipment/');
+        const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/equipment/');
         if (res.ok) {
           const data = await res.json();
           const formatted = data.map((eq: any) => ({

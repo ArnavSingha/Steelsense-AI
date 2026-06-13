@@ -24,7 +24,7 @@ export default function ReportsPage() {
 
     try {
       // 1. Get an equipment ID
-      const eqRes = await fetch('http://localhost:8001/api/v1/equipment/');
+      const eqRes = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/equipment/');
       let equipmentId = "MOTOR-4";
       if (eqRes.ok) {
         const equipments = await eqRes.json();
@@ -32,7 +32,7 @@ export default function ReportsPage() {
       }
 
       // 2. Generate
-      const res = await fetch('http://localhost:8001/api/v1/reports/generate', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/reports/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

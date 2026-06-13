@@ -29,7 +29,7 @@ export default function AlertFeed({ demoMode, activeAsset, onSelectAsset, refetc
 
     setSubmitting(prev => ({ ...prev, [alert.id]: true }));
     try {
-      const res = await fetch('http://localhost:8001/api/feedback', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

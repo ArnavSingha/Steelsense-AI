@@ -27,7 +27,7 @@ export default function DegradationChart({ activeAsset }: DegradationChartProps)
     const fetchTrend = async () => {
       try {
         setIsLoading(true);
-        const res = await fetch(`http://localhost:8001/api/sensors/${activeAsset}`);
+        const res = await fetch(`https://steelsense-ai-production.up.railway.app/api/sensors/${activeAsset}`);
         if (res.ok) {
           const json = await res.json();
           if (isMounted && json.trend) {

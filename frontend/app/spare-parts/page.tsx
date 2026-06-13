@@ -13,8 +13,8 @@ export default function SparePartsPage() {
     const fetchSpareParts = async () => {
       try {
         const [partsRes, statsRes] = await Promise.all([
-          fetch('http://localhost:8001/api/v1/spare-parts/'),
-          fetch('http://localhost:8001/api/v1/spare-parts/stats')
+          fetch('https://steelsense-ai-production.up.railway.app/api/v1/spare-parts/'),
+          fetch('https://steelsense-ai-production.up.railway.app/api/v1/spare-parts/stats')
         ]);
         
         if (partsRes.ok && statsRes.ok) {

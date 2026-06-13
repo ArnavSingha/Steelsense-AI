@@ -84,7 +84,7 @@ export default function AssetCard({ demoMode, activeAsset }: AssetCardProps) {
     
     const fetchSensorData = async () => {
       try {
-        const res = await fetch(`http://localhost:8001/api/sensors/${activeAsset}`);
+        const res = await fetch(`https://steelsense-ai-production.up.railway.app/api/sensors/${activeAsset}`);
         if (res.ok) {
           const data = await res.json();
           if (isMounted) setLiveData(data.latest);
@@ -123,7 +123,7 @@ export default function AssetCard({ demoMode, activeAsset }: AssetCardProps) {
         readings[m.rawKey] = parseFloat(m.value);
       });
 
-      const res = await fetch('http://localhost:8001/api/ml/predict', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/ml/predict', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

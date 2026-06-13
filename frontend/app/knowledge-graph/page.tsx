@@ -71,7 +71,7 @@ export default function KnowledgeGraphPage() {
 
   const fetchImpact = async (asset: string) => {
     try {
-      const res = await fetch(`http://localhost:8001/api/knowledge-graph/impact/${asset}`);
+      const res = await fetch(`https://steelsense-ai-production.up.railway.app/api/knowledge-graph/impact/${asset}`);
       if (res.ok) {
         const data = await res.json();
         if (data && data.affected_assets) {

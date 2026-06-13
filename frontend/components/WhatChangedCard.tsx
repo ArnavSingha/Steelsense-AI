@@ -44,7 +44,7 @@ export default function WhatChangedCard({ activeAsset }: WhatChangedCardProps) {
     let isMounted = true;
     const fetchSensorData = async () => {
       try {
-        const res = await fetch(`http://localhost:8001/api/sensors/${activeAsset}`);
+        const res = await fetch(`https://steelsense-ai-production.up.railway.app/api/sensors/${activeAsset}`);
         if (res.ok) {
           const data = await res.json();
           if (isMounted && data.trend && data.trend.length > 0) {

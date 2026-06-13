@@ -34,7 +34,7 @@ export default function RiskHeatmapPage() {
   useEffect(() => {
     const fetchRiskDetails = async () => {
       try {
-        const res = await fetch('http://localhost:8001/api/analytics/risk-summary');
+        const res = await fetch('https://steelsense-ai-production.up.railway.app/api/analytics/risk-summary');
         if (res.ok) {
           const data = await res.json();
           // We can dynamically map backend lists if needed, but for robust offline/online compliance, 

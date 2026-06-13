@@ -17,7 +17,7 @@ export default function DiagnosisPage() {
 
   const fetchDiagnoses = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/v1/diagnosis/');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/diagnosis/');
       if (res.ok) {
         const data = await res.json();
         const formatted = data.map((d: any) => ({
@@ -62,7 +62,7 @@ export default function DiagnosisPage() {
 
     try {
       // 1. Get an equipment ID
-      const eqRes = await fetch('http://localhost:8001/api/v1/equipment/');
+      const eqRes = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/equipment/');
       let equipmentId = "MOTOR-4";
       let eqName = "System";
       if (eqRes.ok) {
@@ -74,7 +74,7 @@ export default function DiagnosisPage() {
       }
 
       // 2. Run Diagnosis
-      const diagRes = await fetch('http://localhost:8001/api/v1/diagnosis/', {
+      const diagRes = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/diagnosis/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

@@ -29,7 +29,7 @@ export default function WorkOrdersPage() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/logbook');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/logbook');
       if (res.ok) {
         const data = await res.json();
         if (data.logbook && data.logbook.length > 0) {
@@ -43,7 +43,7 @@ export default function WorkOrdersPage() {
 
   const fetchFeedback = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/feedback');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback');
       if (res.ok) {
         const data = await res.json();
         if (data.feedback && data.feedback.length > 0) {
@@ -74,7 +74,7 @@ export default function WorkOrdersPage() {
     }
 
     try {
-      const res = await fetch('http://localhost:8001/api/feedback', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

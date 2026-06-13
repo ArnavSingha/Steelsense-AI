@@ -21,8 +21,8 @@ export default function AlertsPage() {
     const fetchAlerts = async () => {
       try {
         const [alertsRes, statsRes] = await Promise.all([
-          fetch('http://localhost:8001/api/v1/alerts/'),
-          fetch('http://localhost:8001/api/v1/alerts/stats')
+          fetch('https://steelsense-ai-production.up.railway.app/api/v1/alerts/'),
+          fetch('https://steelsense-ai-production.up.railway.app/api/v1/alerts/stats')
         ]);
         
         if (alertsRes.ok && statsRes.ok) {

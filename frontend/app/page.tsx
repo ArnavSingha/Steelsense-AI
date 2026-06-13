@@ -54,7 +54,7 @@ export default function Home() {
   const fetchStats = async () => {
     try {
       // Fetching from backend on port 8001
-      const res = await fetch('http://localhost:8001/api/v1/dashboard/stats');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/v1/dashboard/stats');
       if (res.ok) {
         const data = await res.json();
         setDashboardStats(data);
@@ -66,7 +66,7 @@ export default function Home() {
 
   const fetchRiskSummary = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/analytics/risk-summary');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/analytics/risk-summary');
       if (res.ok) {
         const data = await res.json();
         setRiskSummary({
@@ -83,7 +83,7 @@ export default function Home() {
 
   const fetchLogs = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/logbook');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/logbook');
       if (res.ok) {
         const data = await res.json();
         if (data.logbook && data.logbook.length > 0) {
@@ -97,7 +97,7 @@ export default function Home() {
 
   const fetchFeedback = async () => {
     try {
-      const res = await fetch('http://localhost:8001/api/feedback');
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/feedback');
       if (res.ok) {
         const data = await res.json();
         if (data.feedback && data.feedback.length > 0) {

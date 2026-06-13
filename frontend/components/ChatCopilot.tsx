@@ -29,7 +29,7 @@ export default function ChatCopilot() {
       const threadId = typeof window !== 'undefined' ? (localStorage.getItem('copilot_thread_id') || Math.random().toString(36).substring(7)) : 'default';
       if (typeof window !== 'undefined') localStorage.setItem('copilot_thread_id', threadId);
       
-      const res = await fetch('http://localhost:8001/api/copilot/stream', {
+      const res = await fetch('https://steelsense-ai-production.up.railway.app/api/copilot/stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
